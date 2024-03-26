@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CountDown | Home</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body
+    class="flex flex-col justify-center items-center h-[100vh] bg-[url(/img/bgImg.jpg)]"
+  >
+    <p class="text-[5rem] font-bold text-white">
+      <span th:text="${minutes}" id="minutes"></span>
+      <span> : </span>
+      <span id="seconds">00</span>
+    </p>
+    <a
+      href="/"
+      class="hover:[text-shadow:1px_1px_1px_var(--tw-shadow-color)] text-[1.5rem] font-bold drop-shadow-xl shadow-white hidden"
+      id="back"
+      >Go Back</a
+    >
+    <script src="/js/countDown.js"></script>
+  </body>
+</html>
